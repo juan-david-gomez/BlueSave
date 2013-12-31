@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+
+{% block cabezera %} Borrar Movimientos {% endblock %}
+
+{% block contenido %}
+		<form method="post">{% csrf_token %}
+		    Seguro quieres borrar esta "{{ object.Tipo }}" ?
+		    <input type="submit" value="Borrar" />
+		</form>
+{% endblock %}
+		

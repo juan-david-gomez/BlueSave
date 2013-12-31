@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+
+{% block cabezera %} Listar Categorias {% endblock %}
+
+{% block contenido %}
+
+	
+	<ul data-role="listview">
+	{% for t in Categorias %}
+		<li data-role="list-divider"><center>{{t.nombreCategoria}}</center></li>
+		<li>
+
+		    <fieldset class="ui-grid-a">
+		        <div class="ui-block-a">
+
+		               <a href="EditarCategoria/{{t.id}}" data-role="button" data-icon="plus">Editar/Ver</a>
+		        </div>
+
+		        <div class="ui-block-b">
+
+		           
+		               <a href="BorrarCategoria/{{t.id}}" data-role="button" data-icon="minus">Borrar</a>
+		            
+
+		        </div>     
+		    </fieldset>
+
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

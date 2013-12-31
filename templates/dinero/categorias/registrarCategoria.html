@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+
+
+{% block cabezera %} Registrar Categorias {% endblock %}
+
+{% block contenido %}
+		<form method="post" enctype="multipart/form-data"> 
+			{% csrf_token %}
+			{{form.as_p}}
+
+			<input type="submit" value="Enviar">
+		</form>
+{% endblock %}
+		

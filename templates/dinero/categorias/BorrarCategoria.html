@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+
+
+
+
+{% block contenido %}
+		<form method="post">{% csrf_token %}
+		    Seguro quieres borrar "{{ object.NombreCategoria }}" ?
+		    <input type="submit" value="Borrar" />
+		</form>
+{% endblock %}
+		

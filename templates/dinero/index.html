@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+
+
+{% block cabezera %} Menu Principal {% endblock %}
+
+{% block contenido %}
+
+  <a href="/MostrarSaldo" data-role="button" data-icon="search" data-iconpos="right">Mostrar saldo</a>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a">
+    	<div data-role="controlgroup">
+		    
+		    <a href="/RegistrarMovimiento" data-role="button" data-icon="plus" data-iconpos="right">Registar movimiento</a>
+		    <a href="/ListarMovimiento" data-role="button" data-icon="info" data-iconpos="right">Listar movimientos</a>
+		  
+		</div>
+	</div>
+
+    <div class="ui-block-b">
+    	<div data-role="controlgroup">
+		    
+		    <a href="/RegistrarTipo" data-role="button" data-icon="plus" data-iconpos="right">Registar Tipo de Movimientos</a>
+		    <a href="/ListarTipo" data-role="button" data-icon="info" data-iconpos="right">Listar Tipo de Movimientos</a>
+		</div>
+	</div>
+</div><!-- /grid-a -->
+
+
+    	<div data-role="controlgroup">
+		    
+		    <a href="/RegistrarCategoria" data-role="button" data-icon="plus" data-iconpos="right">Registar Categorias de gastos</a>
+		    <a href="/ListarCategoria" data-role="button" data-icon="info" data-iconpos="right">Listar Categorias de gastos</a>
+		  
+		</div>
+
+
+   
+    	<div data-role="controlgroup">
+		    
+		    <a href="/Cerrar" data-role="button" data-icon="plus" data-iconpos="right">Cerrar Sesion</a>
+		</div>
+	
+</div><!-- /grid-a -->
+	
+{% endblock %}
+		

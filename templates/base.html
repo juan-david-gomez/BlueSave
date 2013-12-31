@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BlueSave</title>
+		<link rel="stylesheet" href="{{STATIC_URL}}themes/Blue7.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		
+		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	</head>
+	<body>
+		
+
+		<div data-role="page" data-theme="a">
+
+
+			<div data-role="panel" data-position="right" id="menu" data-display="push" data-theme="a" >
+					
+				<a href="/MostrarSaldo" data-role="button">Consultar Saldo</a>
+
+				<div data-role="collapsible">
+					<h3>Movimientos</h3>
+					<div data-role="controlgroup">
+						<a href="/RegistrarMovimiento" data-role="button">Registar Movimiento</a>
+						<a href="/ListarMovimiento" data-role="button">Listar Movimientos </a>
+					</div>
+				</div>
+				<div data-role="collapsible">
+					<h3>Tipos</h3>
+
+					<div data-role="controlgroup">
+						<a href="/RegistrarTipo" data-role="button">Registar Tipos</a>
+						<a href="/ListarTipo" data-role="button">Listar Tipos </a>
+					</div>
+				</div>
+				<div data-role="collapsible">
+					<h3>Categorias</h3>
+
+					<div data-role="controlgroup">
+						<a href="/RegistrarCategoria" data-role="button">Registar Categorias</a>
+						<a href="/ListarCategoria" data-role="button">Listar Categorias </a>
+					</div>
+				</div>
+				<div data-role="collapsible">
+					<h3>Usuarios</h3>
+
+					<div data-role="controlgroup">
+						<a href="/Cerrar" data-role="button">Cerrar Sesion</a>
+					
+					</div>
+				</div>
+
+			</div>
+
+
+			<div data-role="header" data-position="inline">
+				<a href="/" data-role="button" data-icon="home" data-iconpos="notext"  data-inline="true">Inicio</a>
+				<h1>{% block cabezera %} {% endblock %}</h1>
+				<a href="#menu" data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true">Menu</a>
+			</div>
+			<div data-role="content" data-theme="a">
+				{% block contenido %} {% endblock %}
+			</div>
+			<div data-role="footer">
+				<h2>Juan David Gomez - Leidy Maria Gomez</h2>
+
+			</div>
+		</div>
+	</body>
+</html>
